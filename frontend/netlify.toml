@@ -2,8 +2,6 @@
   command = "npm run build"
   publish = "out"
 
-[build.environment]
-  NODE_ENV = "production"
 
 [[headers]]
   for = "/*"
