@@ -1,0 +1,194 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ember: var(--ember);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+
+  --animate-draw: draw 2s ease forwards;
+  --animate-pulse-node: pulse-node 3s ease-in-out infinite;
+  --animate-flow: flow 3s linear infinite;
+}
+
+:root {
+  color-scheme: dark;
+  --background: oklch(0.16 0.008 255);
+  --foreground: oklch(0.96 0.004 90);
+
+  --surface: oklch(0.19 0.009 255);
+  --surface-2: oklch(0.23 0.011 255);
+
+  --card: oklch(0.19 0.009 255);
+  --card-foreground: oklch(0.96 0.004 90);
+  --popover: oklch(0.19 0.011 255);
+  --popover-foreground: oklch(0.96 0.004 90);
+
+  --primary: oklch(0.62 0.18 258);
+  --primary-foreground: oklch(0.98 0.004 255);
+
+  --secondary: oklch(0.23 0.011 255);
+  --secondary-foreground: oklch(0.96 0.004 90);
+
+  --muted: oklch(0.23 0.011 255);
+  --muted-foreground: oklch(0.66 0.014 255);
+
+  --accent: oklch(0.62 0.18 258);
+  --accent-foreground: oklch(0.98 0.004 255);
+
+  --ember: oklch(0.72 0.13 55);
+
+  --destructive: oklch(0.62 0.2 25);
+  --border: oklch(1 0 0 / 8%);
+  --border-strong: oklch(1 0 0 / 16%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.62 0.18 258);
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: oklch(0.62 0.18 258 / 0.3);
+    color: var(--foreground);
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Faint technical grid background */
+  .bg-grid {
+    background-image: linear-gradient(
+        to right,
+        oklch(1 0 0 / 0.035) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .bg-grid-sm {
+    background-image: linear-gradient(
+        to right,
+        oklch(1 0 0 / 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, oklch(1 0 0 / 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .bg-dots {
+    background-image: radial-gradient(
+      oklch(1 0 0 / 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--dash, 1000);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulse-node {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes flow {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
