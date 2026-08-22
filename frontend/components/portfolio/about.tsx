@@ -205,12 +205,12 @@ export function About() {
         {/* Profile Blocks */}
         <div className="mb-32 reveal">
           <h3 className="mb-10 font-mono text-sm tracking-widest text-foreground">What I bring to a project</h3>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-10">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-10">
             {/* Block 1 */}
             <div className="flex flex-col gap-4 border-t border-border pt-6 group cursor-default" data-cursor="focus">
               <span className="font-mono text-[10px] tracking-widest text-muted-foreground group-hover:text-primary transition-colors">01 — FULL STACK THINKING</span>
               <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
-                I work across the frontend, backend, database and integrations instead of treating each layer as a separate problem.
+                I build complete solutions. Instead of just focusing on one part of an app, I handle everything from the user interface to the databases and servers, ensuring everything works together seamlessly.
               </p>
             </div>
             {/* Block 2 */}
@@ -224,7 +224,14 @@ export function About() {
             <div className="flex flex-col gap-4 border-t border-border pt-6 group cursor-default" data-cursor="focus">
               <span className="font-mono text-[10px] tracking-widest text-muted-foreground group-hover:text-primary transition-colors">03 — CLIENT + PRODUCT EXPERIENCE</span>
               <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
-                I&apos;ve worked both on client-facing websites and larger application systems, giving me experience with requirements, development, deployment and post-launch work.
+                I&apos;ve worked on both client-facing digital products and larger application systems, giving me experience with requirements, development, deployment and post-launch work.
+              </p>
+            </div>
+            {/* Block 4 */}
+            <div className="flex flex-col gap-4 border-t border-border pt-6 group cursor-default" data-cursor="focus">
+              <span className="font-mono text-[10px] tracking-widest text-muted-foreground group-hover:text-primary transition-colors">04 — AI-ACCELERATED WORKFLOW</span>
+              <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
+                I leverage modern AI tools to rapidly prototype, write boilerplate, and solve complex problems, allowing me to build faster and focus on core business logic.
               </p>
             </div>
           </div>
@@ -250,7 +257,7 @@ export function About() {
 
               <div className="flex flex-col gap-1 border-l-2 border-border-strong pl-4">
                 <span className="font-medium text-foreground text-sm md:text-base">BHA Consulting</span>
-                <span className="font-mono text-[10px] tracking-widest text-foreground">WEB DEVELOPER (PART-TIME)</span>
+                <span className="font-mono text-[10px] tracking-widest text-foreground">SOFTWARE DEVELOPER (PART-TIME)</span>
                 <span className="mt-1 font-mono text-[10px] tracking-widest text-muted-foreground">2023 — 2024</span>
               </div>
 
@@ -293,7 +300,7 @@ export function About() {
           </h3>
 
           <p className="max-w-2xl text-base md:text-lg leading-relaxed text-muted-foreground text-pretty mb-12">
-            A polished interface is only one part of a product. I care about the systems underneath it — how data moves, how users are authenticated, how APIs communicate, how workflows are automated and how the application behaves in production.
+            A beautiful design is just the beginning. I focus on creating reliable and secure systems behind the scenes—ensuring user data is safe, business processes run smoothly, and the application performs flawlessly as it grows.
           </p>
 
           <MindsetDiagram />
@@ -308,17 +315,6 @@ export function About() {
               </span>
             ))}
           </div>
-
-          <a
-            href="#skills"
-            data-cursor="cta"
-            className="group flex shrink-0 items-center gap-2 text-xs font-mono tracking-widest text-primary transition-colors hover:text-foreground"
-          >
-            VIEW FULL STACK
-            <span className="transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </a>
         </div>
 
       </div>

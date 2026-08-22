@@ -14,16 +14,16 @@ type Node = {
 
 const NODES: Node[] = [
   { id: 'core', label: 'SURAJ ALI', x: 50, y: 50, kind: 'center' },
-  { id: 'react', label: 'REACT', x: 17, y: 20, kind: 'primary', tag: 'UI' },
-  { id: 'next', label: 'NEXT.JS', x: 52, y: 11, kind: 'primary', tag: 'APP' },
-  { id: 'node', label: 'NODE.JS', x: 85, y: 22, kind: 'primary', tag: 'API' },
-  { id: 'express', label: 'EXPRESS', x: 88, y: 56, kind: 'primary', tag: 'AUTH' },
-  { id: 'mongo', label: 'MONGODB', x: 60, y: 87, kind: 'primary', tag: 'DATABASE' },
-  { id: 'aws', label: 'AWS', x: 14, y: 62, kind: 'primary', tag: 'CLOUD' },
-  { id: 'razorpay', label: 'RAZORPAY', x: 88, y: 86, kind: 'integration', tag: 'PAYMENTS' },
-  { id: 'firebase', label: 'FIREBASE', x: 30, y: 88, kind: 'integration' },
-  { id: 'msg91', label: 'MSG91', x: 4, y: 38, kind: 'integration' },
-  { id: 'whatsapp', label: 'WHATSAPP', x: 96, y: 40, kind: 'integration' },
+  { id: 'react', label: 'USER INTERFACE', x: 17, y: 20, kind: 'primary', tag: 'REACT' },
+  { id: 'next', label: 'WEB APP', x: 52, y: 11, kind: 'primary', tag: 'NEXT.JS' },
+  { id: 'node', label: 'BACKEND API', x: 85, y: 22, kind: 'primary', tag: 'NODE.JS' },
+  { id: 'express', label: 'SECURE AUTH', x: 88, y: 56, kind: 'primary', tag: 'EXPRESS' },
+  { id: 'mongo', label: 'DATABASE', x: 60, y: 87, kind: 'primary', tag: 'MONGODB' },
+  { id: 'aws', label: 'CLOUD HOSTING', x: 14, y: 62, kind: 'primary', tag: 'AWS' },
+  { id: 'razorpay', label: 'PAYMENTS', x: 88, y: 86, kind: 'integration', tag: 'RAZORPAY' },
+  { id: 'firebase', label: 'REALTIME SYNC', x: 30, y: 88, kind: 'integration', tag: 'FIREBASE' },
+  { id: 'msg91', label: 'SMS ALERTS', x: 4, y: 38, kind: 'integration', tag: 'MSG91' },
+  { id: 'whatsapp', label: 'MESSAGING', x: 96, y: 40, kind: 'integration', tag: 'WHATSAPP API' },
 ]
 
 const EDGES: [string, string][] = [

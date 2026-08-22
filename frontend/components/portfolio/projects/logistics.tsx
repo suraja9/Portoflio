@@ -111,26 +111,26 @@ function LogisticsMockup() {
 const META = [
   { k: 'ROLE', v: 'Full Stack Developer' },
   { k: 'STACK', v: 'MERN · Next.js · Node.js · Express · MongoDB · AWS' },
-  { k: 'SYSTEM', v: 'Multi-tenant architecture' },
-  { k: 'AUTH', v: 'JWT + Role-based access control' },
+  { k: 'IMPACT', v: 'Streamlined operations for multiple business branches' },
+  { k: 'SECURITY', v: 'Secure logins with custom access levels for different staff roles' },
 ]
 
 const DETAILS = [
   {
-    t: 'MULTI-TENANCY',
-    d: 'Different user types and business workflows across a single platform.',
+    t: 'SCALABLE OPERATIONS',
+    d: 'Designed to handle different user types and business workflows smoothly on a single platform.',
   },
   {
-    t: 'AUTHENTICATION',
-    d: 'JWT authentication and role-based access control.',
+    t: 'SECURE ACCESS',
+    d: 'Implemented robust security measures to ensure each team member only sees what they need to.',
   },
   {
-    t: 'API ENGINEERING',
-    d: 'Secure REST APIs with validation, rate limiting and CORS handling.',
+    t: 'RELIABLE BACKEND',
+    d: 'Built a fast and reliable backend infrastructure to keep data syncing seamlessly across the platform.',
   },
   {
-    t: 'CLOUD',
-    d: 'Production deployment and infrastructure managed on AWS.',
+    t: 'CLOUD HOSTING',
+    d: 'Deployed and managed securely on AWS for high availability and reliability.',
   },
 ]
 
@@ -146,9 +146,7 @@ export function Logistics() {
           COURIER &amp; LOGISTICS PLATFORM
         </h3>
         <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground reveal">
-          Multi-tenant logistics infrastructure for customers, corporate
-          clients, branches and field couriers. Architected and led the
-          development end to end.
+          A comprehensive logistics platform built to manage operations across customers, corporate clients, branch offices, and field delivery staff. I led the development of this entire system from start to finish.
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_0.6fr] lg:gap-12">

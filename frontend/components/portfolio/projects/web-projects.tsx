@@ -40,7 +40,7 @@ export function WebProjects() {
         </h3>
         
         <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground reveal">
-          A comprehensive registry of client websites built, scaled, and optimized. From full architecture and e-commerce setups to targeted technical audits and feature integrations.
+          A collection of client websites I've built, improved, and optimized. Ranging from complete e-commerce stores to targeted technical updates and feature additions.
         </p>
 
         <div className="mt-12 overflow-hidden rounded-xl border border-border-strong bg-surface shadow-2xl shadow-black/40 reveal">

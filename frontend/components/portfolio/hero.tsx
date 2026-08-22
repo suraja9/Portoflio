@@ -1,11 +1,12 @@
 import { Counter } from './counter'
 import { SystemDiagram } from './system-diagram'
+import Link from 'next/link'
 
 const METRICS = [
-  { value: 15, suffix: '+', label: 'MONTHS PRODUCTION EXPERIENCE' },
-  { value: 20, suffix: '+', label: 'PRODUCTION WEBSITES' },
-  { value: 10, prefix: '$', suffix: 'K+', label: 'CUMULATIVE E-COMMERCE SALES' },
-  { text: 'MERN', label: 'PRIMARY STACK' },
+  { value: 3, suffix: '+', label: 'YEARS OF EXPERIENCE' },
+  { value: 20, suffix: '+', label: 'PRODUCTS SHIPPED' },
+  { value: 100, suffix: '%', label: 'CLIENT SATISFACTION' },
+  { value: 24, suffix: '/7', label: 'APPLICATION RELIABILITY' },
 ] as const
 
 export function Hero() {
@@ -25,30 +26,30 @@ export function Hero() {
           <div className="mb-6 flex items-center gap-3 font-mono text-[10px] tracking-[0.22em] text-muted-foreground reveal">
             <span className="text-primary">SURAJ ALI</span>
             <span className="h-px w-8 bg-border-strong" />
-            <span>FULL STACK DEVELOPER</span>
+            <span>SOFTWARE DEVELOPER</span>
           </div>
 
           <h1 className="text-balance text-[13vw] font-semibold leading-[0.92] tracking-tight sm:text-6xl md:text-7xl lg:text-[5.2rem] reveal">
-            I BUILD{' '}
-            <span className="text-primary">SYSTEMS</span>,
+            I BUILD
             <br />
-            NOT JUST{' '}
+            <span className="text-primary">SOFTWARE</span>,
+            <br />
+            THAT SOLVES
+            <br />
             <span className="relative inline-block">
-              WEBSITES
+              PROBLEMS
               <span className="absolute -bottom-1 left-0 h-[3px] w-full bg-primary/50" />
             </span>
             .
           </h1>
 
           <p className="mt-8 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground reveal">
-            Full Stack Developer with 15+ months of experience building
-            production logistics, business automation, e-commerce and mobile
-            applications.
+            Software Developer with 15+ months of experience turning complex business requirements into scalable, high-performance applications. I focus on writing clean code and building systems that drive real-world impact.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3 reveal">
-            <a
-              href="#work"
+            <Link
+              href="/projects"
               data-cursor="cta"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
             >
@@ -56,7 +57,7 @@ export function Hero() {
               <span className="transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5">
                 ↘
               </span>
-            </a>
+            </Link>
             <a
               href="#contact"
               data-cursor="cta"
@@ -71,7 +72,7 @@ export function Hero() {
 
           {/* micro labels */}
           <div className="mt-10 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[9px] tracking-[0.18em] text-muted-foreground/70 reveal">
-            {['PRODUCTION READY', 'MERN STACK', 'AWS DEPLOYED'].map((t) => (
+            {['BUSINESS FOCUSED', 'END-TO-END DEVELOPMENT', 'AWS DEPLOYED'].map((t) => (
               <span key={t} className="flex items-center gap-1.5">
                 <span className="h-1 w-1 bg-primary/60" />
                 {t}
@@ -96,15 +97,11 @@ export function Hero() {
               className={`flex flex-col gap-2 py-8 reveal ${i % 2 === 0 ? 'pr-4' : 'pl-4'} md:px-6 md:first:pl-0`}
             >
               <span className="text-4xl font-semibold tracking-tight md:text-5xl">
-                {'text' in m ? (
-                  m.text
-                ) : (
-                  <Counter
-                    value={m.value}
-                    prefix={'prefix' in m ? m.prefix : ''}
-                    suffix={m.suffix}
-                  />
-                )}
+                <Counter
+                  value={m.value}
+                  prefix={'prefix' in m ? m.prefix : ''}
+                  suffix={m.suffix}
+                />
               </span>
               <span className="font-mono text-[9px] leading-relaxed tracking-[0.16em] text-muted-foreground">
                 {m.label}

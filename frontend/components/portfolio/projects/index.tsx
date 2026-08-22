@@ -17,7 +17,7 @@ export function ProjectsSection() {
           SELECTED <span className="text-primary">WORK</span>
         </h2>
         <p className="mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-muted-foreground reveal text-pretty">
-          A showcase of production systems, digital products, and client websites I have architected and developed.
+          A showcase of real-world applications, digital products, and client websites I have built from the ground up.
         </p>
       </div>
 

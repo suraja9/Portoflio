@@ -68,8 +68,8 @@ export function CourierBoy() {
               COURIERBOY
             </h3>
             <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted-foreground reveal">
-              A mobile delivery-partner application for managing pickups,
-              deliveries, bookings and payment settlement.
+              A mobile app built for delivery partners to easily manage their daily tasks,
+              including tracking pickups, completing deliveries, and processing payments on the go.
             </p>
             <div className="mt-6 font-mono text-[11px] tracking-widest text-muted-foreground reveal">
               React Native · Node.js · Express · MongoDB

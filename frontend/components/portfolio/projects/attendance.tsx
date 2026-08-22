@@ -85,15 +85,14 @@ export function Attendance() {
               ATTENDANCE &amp; SALARY MANAGEMENT
             </h3>
             <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted-foreground reveal">
-              Location-verified attendance with automated payroll — from
-              geofenced check-in to generated payslip.
+              A complete HR and payroll system that automatically tracks employee attendance using location verification and instantly calculates salaries and payslips.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 reveal">
               <span className="rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 font-mono text-[10px] tracking-widest text-primary">
-                GEOFENCED ATTENDANCE
+                LOCATION-BASED ATTENDANCE
               </span>
               <span className="rounded-md border border-border-strong bg-surface px-3 py-1.5 font-mono text-[10px] tracking-widest text-foreground">
-                AUTOMATED CALCULATIONS
+                AUTOMATED PAYROLL
               </span>
             </div>
             <div className="mt-8 reveal">
